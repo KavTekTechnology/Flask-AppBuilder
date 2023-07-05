@@ -304,8 +304,9 @@
 {% endmacro %}
 
 {% macro render_list_header(can_add, page, page_size, count, filters, actions, modelview_name) %}
-    {{ render_pagination(page, page_size, count, modelview_name) }}
-    {{ render_set_page_size(page, page_size, count, modelview_name) }}
+
+    <!--     {{ render_pagination(page, page_size, count, modelview_name) }}
+    {{ render_set_page_size(page, page_size, count, modelview_name) }} -->
     {% if can_add %}
         {% set endpoint = modelview_name + '.add' %}
         {% set path = endpoint | safe_url_for %}

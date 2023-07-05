@@ -26,6 +26,8 @@
     {% block end_content scoped %}
     {% endblock %}
 
+    {{ render_pagination(page, page_size, count, modelview_name) }}
+    {{ render_set_page_size(page, page_size, count, modelview_name) }}
     {{ lib.action_form(actions, modelview_name) }}
 
     <script language="javascript">
